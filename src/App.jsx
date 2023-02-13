@@ -1,4 +1,6 @@
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
+// import { Parallax } from 'react-parallax'
+import image1 from './images/cupcakes.jpg'
 import styles from './styles.module.css'
 
 function App() {
@@ -7,14 +9,16 @@ function App() {
 
   return (
     <div>
-      <div className={styles.background}>
-        <Parallax pages={2}>
+      <div>
+        <Parallax pages={2} strength={400} >
 
-          <ParallaxLayer offset={0} speed={0.5} style={{ ...alignCenter, justifyContent:'center', height:'10rem' }}>
-            <h1 className={styles.scrollText}>Scroll down</h1>
+          <ParallaxLayer offset={0}   speed={.5} style={{ ...alignCenter, justifyContent:'center', height:'10rem' }}>
+            < img src={image1} className={styles.scrollText}
+              
+            />
           </ParallaxLayer>
 
-          <ParallaxLayer sticky={{ start: 0, end: 0.55 }} style={{ ...alignCenter, justifyContent: 'flex-start' }}>
+          <ParallaxLayer sticky={{ start: 0, end: 0.5 }} style={{ ...alignCenter, justifyContent: 'flex-start' }}>
             <div className={`${styles.card} ${styles.sticky}`}>
               <p>I'm a sticky layer</p>
             </div>
@@ -34,6 +38,8 @@ function App() {
         
         </Parallax>
       </div>
+      <h1>Cualquier cosa</h1>
+      <img src={image1} alt="" />
     </div>
   )
 }

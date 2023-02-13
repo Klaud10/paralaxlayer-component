@@ -1,5 +1,10 @@
+::-webkit-scrollbar {
+  display: none;
+}
+
 .background {
-    background: linear-gradient(#e66564, #9198e5);
+    /* background: linear-gradient(#e66564, #9198e5);
+    background-image: url(./images/cupcakes.jpg); */
     position: absolute;
     top: 0;
     bottom: 0;
@@ -11,7 +16,10 @@
   }
   
   .scrollText {
-    font-size: 1.5rem;
+    border: 2px red solid;
+    /* font-size: 1.5rem; */
+    height: 150vh;
+    width: 100%;
   }
   
   .card {
